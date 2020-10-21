@@ -30,6 +30,11 @@ class Food < Store
     super
     @shelf_life = input_options[:shelf_life]
   end
+
+  def print_info
+    puts "The #{color} #{type} is #{price} with a shelf life of #{shelf_life}."
+  end
+
 end
 
 item1 = Store.new(type: "apple", color: "red", price: 1.5)
@@ -45,3 +50,4 @@ puts item1.price
 puts item4.shelf_life
 item1.price = 1.8
 item4.shelf_life
+item4.print_info
